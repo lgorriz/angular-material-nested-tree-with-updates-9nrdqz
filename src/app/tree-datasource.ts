@@ -22,6 +22,7 @@ export class TreeDataSource extends MatTreeNestedDataSource<FoodNode> {
 
   /** Add node as child of parent */
   public add(node: FoodNode, parent: FoodNode) {
+    console.log(parent);
     // add dummy root so we only have to deal with `FoodNode`s
     const newTreeData = { name: "Dummy Root", children: this.data };
     this._add(node, parent, newTreeData);
